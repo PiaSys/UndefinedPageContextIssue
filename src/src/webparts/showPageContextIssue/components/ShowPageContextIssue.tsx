@@ -87,10 +87,6 @@ export default class ShowPageContextIssue extends React.Component<IShowPageConte
 
   public async componentDidMount() {
 
-    console.log('componentDidMount');
-    console.log(this.props.context);
-    console.log(this.props.context.pageContext);
-
     // If we don't have source list, we simply exit
     if (this.props.sourceList == null && !this.props.useFakeData) {
       return;
@@ -102,10 +98,6 @@ export default class ShowPageContextIssue extends React.Component<IShowPageConte
   }
 
   public async componentDidUpdate(prevProps: IShowPageContextIssueProps) {
-
-    console.log('componentDidUpdate');
-    console.log(this.props.context);
-    console.log(this.props.context.pageContext);
 
     // Refresh data if and only if query criteria changed
     if (prevProps.useFakeData === this.props.useFakeData &&
@@ -121,10 +113,6 @@ export default class ShowPageContextIssue extends React.Component<IShowPageConte
     // Refresh Assets Service instance, if switch about Mock Data changed
     if (prevProps.useFakeData !== this.props.useFakeData ||
       prevProps.sourceList !== this.props.sourceList) {
-
-        console.log('componentDidUpdate:RefreshingData');
-        console.log(this.props.context);
-        console.log(this.props.context.pageContext);
     
         this._dataItemsService = new DataItemsService(this._sp, this.props.aadHttpClient, this.props.sourceList);
 
