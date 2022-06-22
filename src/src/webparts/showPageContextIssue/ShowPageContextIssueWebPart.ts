@@ -15,6 +15,7 @@ import { IShowPageContextIssueProps } from './components/IShowPageContextIssuePr
 import { PropertyFieldListPicker, PropertyFieldListPickerOrderBy } from '@pnp/spfx-property-controls/lib/PropertyFieldListPicker';
 
 import { AadHttpClient } from '@microsoft/sp-http';
+import { getSP } from './pnpjsConfig';
 
 export interface IShowPageContextIssueWebPartProps {
   title: string;
@@ -32,6 +33,10 @@ export default class ShowPageContextIssueWebPart extends BaseClientSideWebPart<I
     this._environmentMessage = this._getEnvironmentMessage();
 
     this._aadHttpClient = await this.context.aadHttpClientFactory.getClient("https://graph.microsoft.com");
+
+    //Initialize our _sp object that we can then use in other packages without having to pass around the context.
+    //  Check out pnpjsConfig.ts for an example of a project setup file.
+    getSP(this.context);
 
     return super.onInit();
   }

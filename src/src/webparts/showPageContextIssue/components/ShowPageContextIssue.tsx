@@ -77,7 +77,7 @@ export default class ShowPageContextIssue extends React.Component<IShowPageConte
   constructor(props: IShowPageContextIssueProps) {
     super(props);
 
-    this._sp = getSP(this.props.context);
+    this._sp = getSP();
 
     this.state = {
       items: props.useFakeData ? fakeItems : null,

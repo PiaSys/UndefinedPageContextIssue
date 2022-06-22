@@ -3,7 +3,7 @@
   "solution": {
     "name": "spfx-no-page-context-client-side-solution",
     "id": "1f4d1b69-b7df-49d4-bf78-b55740c45d91",
-    "version": "1.0.0.0",
+    "version": "1.0.0.1",
     "includeClientSideAssets": true,
     "skipFeatureDeployment": true,
     "isDomainIsolated": false,
