@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "spfx-no-page-context-client-side-solution",
+    "id": "1f4d1b69-b7df-49d4-bf78-b55740c45d91",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.14.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "spfx-no-page-context description"
+      },
+      "longDescription": {
+        "default": "spfx-no-page-context description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "spfx-no-page-context Feature",
+        "description": "The feature that activates elements of the spfx-no-page-context solution.",
+        "id": "ecb92863-4bdc-41b9-85ba-a766a7096b7f",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/spfx-no-page-context.sppkg"
+  }
+}
